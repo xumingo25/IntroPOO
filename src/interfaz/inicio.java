@@ -1,6 +1,7 @@
 package interfaz;
 
 import entidad.Categoria;
+import entidad.Cliente;
 import entidad.Producto;
 
 public class inicio {
@@ -8,11 +9,6 @@ public class inicio {
         //instanciando un objeto
         Categoria categoria1 = new Categoria();
         Producto producto2 = new Producto();
-
-
-
-        char caracter = 'h';
-
 
         //asignarle valores a sus caracteristicas
         categoria1.idCategoria = 1;
@@ -26,19 +22,13 @@ public class inicio {
         papasLays.tieneDescuento= false;
         papasLays.stock=10;
 
+        Cliente ejemploCliente = new Cliente();
+        ejemploCliente.nombre = "Domingo";
+        ejemploCliente.saldoEfectivo = 1000;
 
-        Categoria categoria2 = new Categoria();
-        categoria2.idCategoria = 2;
-        categoria2.nombreCategoria = "Ensalada";
+        ejemploCliente.comprar(papasLays);
 
-        System.out.println("Valor objeto categoria: "+ categoria1);
 
-        System.out.println("id de categoria: "+categoria1.idCategoria);
 
-        producto2.nombre = "ensalada cesar";
-        producto2.categoria = categoria2;
-        producto2.stock = 3;
-        producto2.precio = 4990;
-        producto2.tieneDescuento = true;
     }
 }

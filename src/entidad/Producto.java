@@ -10,6 +10,14 @@ public class Producto {
     public int precio;
     public boolean tieneDescuento;
 
+    public void disminuirStockEn1(){
+        stock--;
+    }
 
+    public void aplicarDescuento25PorCiento(){
+        if(tieneDescuento){
+            precio = (int) (precio * 0.75);
+        }
+    }
 
 }
