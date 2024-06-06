@@ -4,11 +4,16 @@ package entidad;
 //un objeto es una instancia de una clase
 public class Producto {
     //atributos
-    public String nombre; //papas lays
-    public int stock; //10
-    public Categoria categoria; //{1,comida chatarra}
-    public int precio;
-    public boolean tieneDescuento;
+    private String nombre; //papas lays
+    // ¿Como acceso al valor y le modifico el valor?
+    //Accesadores y mutadores
+    //getters & Setters (Métodos)
+    private int stock; //10
+    private Categoria categoria; //{1,comida chatarra}
+    private int precio;
+    private boolean tieneDescuento;
+
+
 
     public void disminuirStockEn1(){
         stock--;
@@ -20,4 +25,54 @@ public class Producto {
         }
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public boolean isTieneDescuento() {
+        return tieneDescuento;
+    }
+
+    public void setTieneDescuento(boolean tieneDescuento) {
+        this.tieneDescuento = tieneDescuento;
+    }
+
+    public Producto() {
+    }
+
+    public Producto(String nombre, int stock, Categoria categoria, int precio, boolean tieneDescuento) {
+        this.nombre = nombre;
+        this.stock = stock;
+        this.categoria = categoria;
+        this.precio = precio;
+        this.tieneDescuento = tieneDescuento;
+    }
 }

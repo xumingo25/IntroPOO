@@ -7,28 +7,17 @@ import entidad.Producto;
 public class inicio {
     public static void main(String[] args) {
         //instanciando un objeto
-        Categoria categoria1 = new Categoria();
+        Categoria categoria1 = new Categoria(1,"Comida Chatarra");
         Producto producto2 = new Producto();
 
-        //asignarle valores a sus caracteristicas
-        categoria1.idCategoria = 1;
-        categoria1.nombreCategoria = "Comida Chatarra";
+        Producto papasLays = new Producto("Papas Lays",10,categoria1,990,false);
+        //new hace referencia a la acción de instanciar un objeto
 
-        Producto papasLays = new Producto();
+        System.out.println("stock papas lays "+papasLays.getStock());
 
-        papasLays.nombre = "Papas Lays";
-        papasLays.categoria =categoria1;
-        papasLays.precio = 990;
-        papasLays.tieneDescuento= false;
-        papasLays.stock=10;
-
-        Cliente ejemploCliente = new Cliente();
-        ejemploCliente.nombre = "Domingo";
-        ejemploCliente.saldoEfectivo = 1000;
+        Cliente ejemploCliente = new Cliente("Domingo",1000);
 
         ejemploCliente.comprar(papasLays);
-
-
-
+        
     }
 }
